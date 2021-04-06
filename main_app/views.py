@@ -1,4 +1,17 @@
 from django.shortcuts import render
+# from .models import Post
+
+class Post():
+  def __init__(self, title, description):
+    self.title = title
+    self.description = description
+    # Add the foreign key linking to a user instance
+    # user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+posts = [
+  Post('About COVID-19', 'We have already written the code to respond using the render method in the view.'),
+  Post('US Benefits', 'Now the fun stuff. We will type it in if there is time, otherwise we will copy/paste and review:')
+]
 
 # Create your views here.
 # Add the following import
@@ -6,7 +19,7 @@ from django.http import HttpResponse
 
 # Define the home view
 def home(request):
-  return render(request, 'index.html')
+  return render(request, 'index.html', { 'posts': posts })
 
 # def about(request):
 #   return HttpResponse('<h1>This is About Page</h1>') # simmiluar to res.send

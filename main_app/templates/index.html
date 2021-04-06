@@ -11,6 +11,15 @@ Date Downloaded: 5/11/2020 6:26:42 PM !--><!-- InstanceBeginEditable name="docti
 	<link href="../static/css/styles.css" rel="stylesheet" type="text/css" /><!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
 </head>
 <body>
+<div class="myposts">
+	<h1>This is my Posts</h1>
+	{% for post in posts %}
+	<span>{{ post.title }}</span>
+	<p>Description: {{ post.description }}</p>
+
+</div>
+{% endfor %}
+
 <table align="center" border="0" cellpadding="0" cellspacing="0" id="Table_01" width="796">
 	<tbody>
 		<tr>

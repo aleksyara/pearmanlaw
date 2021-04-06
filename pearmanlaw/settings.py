@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'pearmanlaw.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'pearman-law',
+        'NAME': 'pearmanlaw2',
     }
 }
 
