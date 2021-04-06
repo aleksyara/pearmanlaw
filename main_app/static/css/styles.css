@@ -1,13 +1,13 @@
 body, html {
 	margin: 0px;
 	padding: 0px;
-	background-image: url(images/80_bg.gif);
+	background-image: url(../images/80_bg.gif);
 	background-repeat: repeat-x;
 	background-color: #4F4F4F;
 	height: 100%;
 }
 #footer {
-	background-image: url(images/footer.gif);
+	background-image: url(../images/footer.gif);
 	background-repeat: no-repeat;
 }
 #footer  .inside {
@@ -30,7 +30,7 @@ body, html {
 }
 
 #core_bg {
-	background-image: url(images/80_hori_bg.gif);
+	background-image: url(../images/80_hori_bg.gif);
 	background-repeat: repeat-y;
 	height: 100%;
 }
@@ -90,7 +90,7 @@ body, html {
 	font-weight: bold;
 }
 #index_nav .newsletter li {
-	list-style-image: url(images/80_small_arrow.png);
+	list-style-image: url(../images/80_small_arrow.png);
 }
 #content {
 	width: 556px;
@@ -164,7 +164,7 @@ body, html {
 	font-weight: bold;
 }
 #template_nav .newsletter li {
-	list-style-image: url(images/80_small_arrow.png);
+	list-style-image: url(../images/80_small_arrow.png);
 }
 #tc {
 	float: right;
