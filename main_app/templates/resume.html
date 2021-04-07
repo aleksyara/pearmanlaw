@@ -73,7 +73,7 @@ Date Downloaded: 5/11/2020 6:26:42 PM !-->
                                 <td class="bottomnav">
                                   <a
                                     class="navlinks"
-                                    href="resume_arbitrator.html"
+                                    href="{% url 'resume_arbitrator' %}"
                                     >Arbitration</a
                                   >
                                 </td>
@@ -89,7 +89,7 @@ Date Downloaded: 5/11/2020 6:26:42 PM !-->
                                   />
                                 </td>
                                 <td class="bottomnav">
-                                  <a class="navlinks" href="resume.html"
+                                  <a class="navlinks" href="{% url 'resume' %}"
                                     >ROBERT C. PEARMAN</a
                                   >
                                 </td>
@@ -534,8 +534,8 @@ Date Downloaded: 5/11/2020 6:26:42 PM !-->
         <tr>
           <td height="99" id="footer" valign="top" width="796">
             <div class="inside">
-              <a href="resume.html">Home</a> |
-              <a href="resume_arbitrator.html">Arbitration</a> |
+              <a href="{% url 'resume' %}">Home</a> |
+              <a href="{% url 'resume_arbitrator' %}">Arbitration</a> |
               <a href="articles.html">Articles</a> |
               <a href="links.html">Links</a> |
               <a href="contactus.html">contact us</a> |

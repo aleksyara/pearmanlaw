@@ -1,25 +1,26 @@
 from django.shortcuts import render
-# from .models import Post
+#import this to crete a view, update, delete..
+from django.views.generic.edit import CreateView
+from .models import Post
 
-class Post():
-  def __init__(self, title, description):
-    self.title = title
-    self.description = description
-    # Add the foreign key linking to a user instance
-    # user = models.ForeignKey(User, on_delete=models.CASCADE)
-
-posts = [
-  Post('About COVID-19', 'We have already written the code to respond using the render method in the view.'),
-  Post('US Benefits', 'Now the fun stuff. We will type it in if there is time, otherwise we will copy/paste and review:')
-]
 
 # Create your views here.
 # Add the following import
 from django.http import HttpResponse
 
+class PostCreate(CreateView):
+  model = Post #it creates Model Form that will be injected -> main_app/cat_form.html
+  fields = '__all__' # fileds generetaed in the modelForm
+  # fields = ['title', 'description']
+  # ^^^ __all__ - specify that the form should contain all of the Cat Model's attributes
+  #OR if you want to display at the form only specific fields = ['name', 'breed', 'description', 'age']
+  # success_url = '/cats/' - this is one wat to redirect. 
+  #However, we can utilize to kwargs={'cat_id': self.id} in the models.py
+
+
 # Define the home view
 def home(request):
-  return render(request, 'index.html', { 'posts': posts })
+  return render(request, 'index.html')
 
 # def about(request):
 #   return HttpResponse('<h1>This is About Page</h1>') # simmiluar to res.send
@@ -38,6 +39,10 @@ def areasofpractice(request):
 
 def articles(request):
     return render(request, 'articles.html') 
+
+def blog(request):
+  posts = Post.objects.all()
+  return render(request, 'blog.html', { 'posts': posts })   
 
 def links(request):
     return render(request, 'links.html')     

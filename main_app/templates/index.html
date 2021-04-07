@@ -11,15 +11,6 @@ Date Downloaded: 5/11/2020 6:26:42 PM !--><!-- InstanceBeginEditable name="docti
 	<link href="../static/css/styles.css" rel="stylesheet" type="text/css" /><!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
 </head>
 <body>
-<div class="myposts">
-	<h1>This is my Posts</h1>
-	{% for post in posts %}
-	<span>{{ post.title }}</span>
-	<p>Description: {{ post.description }}</p>
-
-</div>
-{% endfor %}
-
 <table align="center" border="0" cellpadding="0" cellspacing="0" id="Table_01" width="796">
 	<tbody>
 		<tr>
@@ -38,31 +29,35 @@ Date Downloaded: 5/11/2020 6:26:42 PM !--><!-- InstanceBeginEditable name="docti
 							<tbody>
 								<tr>
 									<td class="bottomnav" width="1%"><img height="9" hspace="5" src="../static/images/80_arrow.png" vspace="5" width="6" /></td>
-									<td class="bottomnav"><a class="navlinks" href="resume_arbitrator">Arbitration</a></td>
+									<td class="bottomnav"><a class="navlinks" href="{% url 'resume_arbitrator' %}">Arbitration</a></td>
 								</tr>
 								<tr>
 									<td class="bottomnav"><img height="9" hspace="5" src="../static/images/80_arrow.png" vspace="5" width="6" /></td>
-									<td class="bottomnav"><a class="navlinks" href="resume">ROBERT C. PEARMAN</a></td>
+									<td class="bottomnav"><a class="navlinks" href="{% url 'resume' %}">ROBERT C. PEARMAN</a></td>
 								</tr>
 								<tr>
 									<td class="bottomnav"><img height="9" hspace="5" src="../static/images/80_arrow.png" vspace="5" width="6" /></td>
-									<td class="bottomnav"><a class="navlinks" href="clients">ROBERT C. PEARMAN REPRESENTATIVE Clients</a></td>
+									<td class="bottomnav"><a class="navlinks" href="{% url 'clients' %}">ROBERT C. PEARMAN REPRESENTATIVE Clients</a></td>
 								</tr>
 								<tr>
 									<td class="bottomnav"><img height="9" hspace="5" src="../static/images/80_arrow.png" vspace="5" width="6" /></td>
-									<td class="bottomnav"><a class="navlinks" href="areasofpractice">Areas of Practice/Case Studies</a></td>
+									<td class="bottomnav"><a class="navlinks" href="{% url 'areasofpractice' %}">Areas of Practice/Case Studies</a></td>
 								</tr>
 								<tr>
 									<td class="bottomnav"><img height="9" hspace="5" src="../static/images/80_arrow.png" vspace="5" width="6" /></td>
-									<td class="bottomnav"><a class="navlinks" href="articles">Articles</a></td>
+									<td class="bottomnav"><a class="navlinks" href="{% url 'articles' %}">Articles</a></td>
 								</tr>
 								<tr>
 									<td class="bottomnav"><img height="9" hspace="5" src="../static/images/80_arrow.png" vspace="5" width="6" /></td>
-									<td class="bottomnav"><a class="navlinks" href="links">Links</a></td>
+									<td class="bottomnav"><a class="navlinks" href="{% url 'blog' %}">NEWS AND NOTES</a></td>
+								</tr>
+								<tr>
+									<td class="bottomnav"><img height="9" hspace="5" src="../static/images/80_arrow.png" vspace="5" width="6" /></td>
+									<td class="bottomnav"><a class="navlinks" href="{% url 'links' %}">Links</a></td>
 								</tr>
 								<tr>
 									<td><img height="9" hspace="5" src="../static/images/80_arrow.png" vspace="5" width="6" /></td>
-									<td><a class="navlinks" href="contactus">Contact Us</a></td>
+									<td><a class="navlinks" href="{% url 'contactus' %}">Contact Us</a></td>
 								</tr>
 							</tbody>
 						</table>
@@ -77,35 +72,35 @@ Date Downloaded: 5/11/2020 6:26:42 PM !--><!-- InstanceBeginEditable name="docti
 								</tr>
 								<tr>
 									<td><img height="6" hspace="5" src="../static/images/80_small_arrow.png" vspace="5" width="4" /></td>
-									<td><a class="praclinks" href="prac_publicworks">Public Works</a></td>
+									<td><a class="praclinks" href="{% url 'prac_publicworks' %}">Public Works</a></td>
 								</tr>
 								<tr>
 									<td><img height="6" hspace="5" src="../static/images/80_small_arrow.png" vspace="5" width="4" /></td>
-									<td><a class="praclinks" href="prac_transpo">Transportation</a></td>
+									<td><a class="praclinks" href="{% url 'prac_transpo' %}">Transportation</a></td>
 								</tr>
 								<tr>
 									<td><img height="6" hspace="5" src="../static/images/80_small_arrow.png" vspace="5" width="4" /></td>
-									<td><a class="praclinks" href="prac_realestate">Real Estate &amp; Housing</a></td>
+									<td><a class="praclinks" href="{% url 'prac_realestate' %}">Real Estate &amp; Housing</a></td>
 								</tr>
 								<tr>
 									<td><img height="6" hspace="5" src="../static/images/80_small_arrow.png" vspace="5" width="4" /></td>
-									<td><a class="praclinks" href="prac_finance">Financial Institutions</a></td>
+									<td><a class="praclinks" href="{% url 'prac_finance' %}">Financial Institutions</a></td>
 								</tr>
 								<tr>
 									<td><img height="6" hspace="5" src="../static/images/80_small_arrow.png" vspace="5" width="4" /></td>
-									<td><a class="praclinks" href="prac_construction">Construction</a></td>
+									<td><a class="praclinks" href="{% url 'prac_construction' %}">Construction</a></td>
 								</tr>
 								<tr>
 									<td><img height="6" hspace="5" src="../static/images/80_small_arrow.png" vspace="5" width="4" /></td>
-									<td><a class="praclinks" href="prac_publicagencies">Public Agencies</a></td>
+									<td><a class="praclinks" href="{% url 'prac_publicagencies' %}">Public Agencies</a></td>
 								</tr>
 								<tr>
 									<td><img height="6" hspace="5" src="../static/images/80_small_arrow.png" vspace="5" width="4" /></td>
-									<td><a class="praclinks" href="prac_utilities">Utilities</a></td>
+									<td><a class="praclinks" href="{% url 'prac_utilities' %}">Utilities</a></td>
 								</tr>
 								<tr>
 									<td><img height="6" hspace="5" src="../static/images/80_small_arrow.png" vspace="5" width="4" /></td>
-									<td><a class="praclinks" href="prac_litigation">Litigation</a></td>
+									<td><a class="praclinks" href="{% url 'prac_litigation' %}">Litigation</a></td>
 								</tr>
 							</tbody>
 						</table>
@@ -120,7 +115,7 @@ Date Downloaded: 5/11/2020 6:26:42 PM !--><!-- InstanceBeginEditable name="docti
 									<td valign="top" width="30%">
 									<div class="databox"><em>Robert C. Pearman, <a href="resume">Attorney</a> , has excelled on a wide variety of business, corporate, real estate and government contract issues.</em><br />
 									&nbsp;
-									<hr /> <em>Robert C. Pearman, <a href="resume_arbitrator">Arbitrator</a>, is a member of the American Arbitration Association, Roster of Neutrals &ndash; Commercial, Construction Law, Government Contract, and Healthcare Panels; and of the State of California Public Works Contract Arbitration Panel</em></div>
+									<hr /> <em>Robert C. Pearman, <a href="{% url 'resume_arbitrator' %}">Arbitrator</a>, is a member of the American Arbitration Association, Roster of Neutrals &ndash; Commercial, Construction Law, Government Contract, and Healthcare Panels; and of the State of California Public Works Contract Arbitration Panel</em></div>
 									</td>
 									<td class="border_left" valign="top" width="70%">
 									<div class="centerpiece"><br />
@@ -148,7 +143,7 @@ Date Downloaded: 5/11/2020 6:26:42 PM !--><!-- InstanceBeginEditable name="docti
 		</tr>
 		<tr>
 			<td height="99" id="footer" valign="top" width="796">&nbsp;
-			<div class="inside"><a href="resume.html">Home</a> | <a href="resume_arbitrator.html">Arbitration</a> | <a href="articles.html">Articles</a> | <a href="links.html">Links</a> | <a href="contactus.html">contact us</a> | <a href="privacy.html">Privacy Policy</a> | <a href="disclaimer.html">Disclaimer</a><br />
+			<div class="inside"><a href="{% url 'resume' %}">Home</a> | <a href="{% url 'resume_arbitrator' %}">Arbitration</a> | <a href="articles.html">Articles</a> | <a href="links.html">Links</a> | <a href="contactus.html">contact us</a> | <a href="privacy.html">Privacy Policy</a> | <a href="disclaimer.html">Disclaimer</a><br />
 			&copy; 2019 Robert C.Pearman, Esq. All Rights Reserved.<br />
 			This web site is designed for general information only. The information presented at this site should not be construed to be formal legal advice nor the formation of a lawyer/client relationship.</div>
 			</td>
