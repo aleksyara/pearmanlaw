@@ -31,7 +31,7 @@ Date Downloaded: 5/11/2020 6:26:42 PM !-->
       <tbody>
         <tr>
           <td height="172" valign="top" width="796">
-            <a href="index.html"
+            <a href="{% url 'home' %}"
               ><img
                 alt="Robert Pearman, Robinson &amp; Pearman: Attorney &amp; Arbitrator"
                 border="0"
@@ -105,7 +105,7 @@ Date Downloaded: 5/11/2020 6:26:42 PM !-->
                                   />
                                 </td>
                                 <td class="bottomnav">
-                                  <a class="navlinks" href="clients.html"
+                                  <a class="navlinks" href="{% url 'clients' %}"
                                     >ROBERT C. PEARMAN REPRESENTATIVE Clients</a
                                   >
                                 </td>
@@ -123,7 +123,7 @@ Date Downloaded: 5/11/2020 6:26:42 PM !-->
                                 <td class="bottomnav">
                                   <a
                                     class="navlinks"
-                                    href="areasofpractice.html"
+                                    href="{% url 'areasofpractice' %}"
                                     >Areas of Practice/Case Studies</a
                                   >
                                 </td>
@@ -139,10 +139,14 @@ Date Downloaded: 5/11/2020 6:26:42 PM !-->
                                   />
                                 </td>
                                 <td class="bottomnav">
-                                  <a class="navlinks" href="articles.html"
+                                  <a class="navlinks" href="{% url 'articles' %}"
                                     >Articles</a
                                   >
                                 </td>
+                              </tr>
+                              <tr>
+                                <td class="bottomnav"><img height="9" hspace="5" src="../static/images/80_arrow.png" vspace="5" width="6" /></td>
+                                <td class="bottomnav"><a class="navlinks" href="{% url 'blog' %}">NEWS AND NOTES</a></td>
                               </tr>
                               <tr>
                                 <td class="bottomnav">
@@ -155,7 +159,7 @@ Date Downloaded: 5/11/2020 6:26:42 PM !-->
                                   />
                                 </td>
                                 <td class="bottomnav">
-                                  <a class="navlinks" href="links.html"
+                                  <a class="navlinks" href="{% url 'links' %}"
                                     >Links</a
                                   >
                                 </td>
@@ -171,7 +175,7 @@ Date Downloaded: 5/11/2020 6:26:42 PM !-->
                                   />
                                 </td>
                                 <td>
-                                  <a class="navlinks" href="contactus.html"
+                                  <a class="navlinks" href="{% url 'contactus' %}"
                                     >Contact Us</a
                                   >
                                 </td>
@@ -207,7 +211,7 @@ Date Downloaded: 5/11/2020 6:26:42 PM !-->
                                   />
                                 </td>
                                 <td>
-                                  <a class="praclinks" href="prac_business.html"
+                                  <a class="praclinks" href="{% url 'prac_business' %}"
                                     >Business and Corporate</a
                                   >
                                 </td>
@@ -225,7 +229,7 @@ Date Downloaded: 5/11/2020 6:26:42 PM !-->
                                 <td>
                                   <a
                                     class="praclinks"
-                                    href="prac_publicworks.html"
+                                    href="{% url 'prac_publicworks' %}"
                                     >Public Works</a
                                   >
                                 </td>
@@ -241,10 +245,14 @@ Date Downloaded: 5/11/2020 6:26:42 PM !-->
                                   />
                                 </td>
                                 <td>
-                                  <a class="praclinks" href="prac_transpo.html"
+                                  <a class="praclinks" href="{% url 'prac_transpo' %}"
                                     >Transportation</a
                                   >
                                 </td>
+                              </tr>
+                              <tr>
+                                <td><img src="../static/images/80_small_arrow.png" width="4" height="6" hspace="5" vspace="5" /></td>
+                                <td><a href="{% url 'prac_domain' %}" class="praclinks">Eminent Domain</a></td>
                               </tr>
                               <tr>
                                 <td>
@@ -259,7 +267,7 @@ Date Downloaded: 5/11/2020 6:26:42 PM !-->
                                 <td>
                                   <a
                                     class="praclinks"
-                                    href="prac_realestate.html"
+                                    href="{% url 'prac_realestate' %}"
                                     >Real Estate &amp; Housing</a
                                   >
                                 </td>
@@ -275,7 +283,7 @@ Date Downloaded: 5/11/2020 6:26:42 PM !-->
                                   />
                                 </td>
                                 <td>
-                                  <a class="praclinks" href="prac_finance.html"
+                                  <a class="praclinks" href="{% url 'prac_finance' %}"
                                     >Financial Institutions</a
                                   >
                                 </td>
@@ -293,7 +301,7 @@ Date Downloaded: 5/11/2020 6:26:42 PM !-->
                                 <td>
                                   <a
                                     class="praclinks"
-                                    href="prac_construction.html"
+                                    href="{% url 'prac_construction' %}"
                                     >Construction</a
                                   >
                                 </td>
@@ -311,7 +319,7 @@ Date Downloaded: 5/11/2020 6:26:42 PM !-->
                                 <td>
                                   <a
                                     class="praclinks"
-                                    href="prac_publicagencies.html"
+                                    href="{% url 'prac_publicagencies' %}"
                                     >Public Agencies</a
                                   >
                                 </td>
@@ -329,7 +337,7 @@ Date Downloaded: 5/11/2020 6:26:42 PM !-->
                                 <td>
                                   <a
                                     class="praclinks"
-                                    href="prac_utilities.html"
+                                    href="{% url 'prac_utilities' %}"
                                     >Utilities</a
                                   >
                                 </td>
@@ -347,7 +355,7 @@ Date Downloaded: 5/11/2020 6:26:42 PM !-->
                                 <td>
                                   <a
                                     class="praclinks"
-                                    href="prac_litigation.html"
+                                    href="{% url 'prac_litigation' %}"
                                     >Litigation</a
                                   >
                                 </td>
@@ -536,11 +544,10 @@ Date Downloaded: 5/11/2020 6:26:42 PM !-->
             <div class="inside">
               <a href="{% url 'resume' %}">Home</a> |
               <a href="{% url 'resume_arbitrator' %}">Arbitration</a> |
-              <a href="articles.html">Articles</a> |
-              <a href="links.html">Links</a> |
-              <a href="contactus.html">contact us</a> |
-              <a href="privacy.html">Privacy Policy</a> |
-              <a href="disclaimer.html">Disclaimer</a><br />
+              <a href="{% url 'articles' %}">Articles</a> |
+              <a href="{% url 'links' %}">Links</a> |
+              <a href="{% url 'contactus' %}">contact us</a> |
+              <a href="{% url 'privacy' %}">Privacy Policy</a> | <a href="{% url 'disclaimer' %}">Disclaimer</a><br />
               &copy; 2019 Robert C.Pearman, Esq. All Rights Reserved.<br />
               This web site is designed for general information only. The
               information presented at this site should not be construed to be

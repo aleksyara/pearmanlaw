@@ -62,6 +62,9 @@ def prac_transpo(request):
 def prac_realestate(request):
     return render(request, 'prac_realestate.html')   
 
+def prac_domain(request):
+    return render(request, 'prac_domain.html')  
+
 def prac_finance(request):
     return render(request, 'prac_finance.html')  
 
@@ -76,6 +79,12 @@ def prac_utilities(request):
 
 def prac_litigation(request):
     return render(request, 'prac_litigation.html')  
+
+def disclaimer(request):
+    return render(request, 'disclaimer.html') 
+
+def privacy(request):
+    return render(request, 'privacy.html') 
 
 def post(request):
     return render(request, 'post.html')

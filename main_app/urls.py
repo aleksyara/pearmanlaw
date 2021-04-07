@@ -16,10 +16,13 @@ urlpatterns = [
     path('prac_publicworks/', views.prac_publicworks, name='prac_publicworks'),
     path('prac_transpo/', views.prac_transpo, name='prac_transpo'),
     path('prac_realestate/', views.prac_realestate, name='prac_realestate'),
+    path('prac_domain/', views.prac_domain, name='prac_domain'),
     path('prac_finance/', views.prac_finance, name='prac_finance'),
     path('prac_construction/', views.prac_construction, name='prac_construction'),
     path('prac_publicagencies/', views.prac_publicagencies, name='prac_publicagencies'),
     path('prac_utilities/', views.prac_utilities, name='prac_utilities'),
     path('prac_litigation/', views.prac_litigation, name='prac_litigation'),
+    path('disclaimer/', views.disclaimer, name='disclaimer'),
+    path('privacy/', views.privacy, name='privacy'),
     path('admin/post/', views.post, name='post'),
 ]
