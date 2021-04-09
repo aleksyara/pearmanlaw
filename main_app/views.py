@@ -88,3 +88,4 @@ def privacy(request):
 
 def post(request):
     return render(request, 'post.html')
+
