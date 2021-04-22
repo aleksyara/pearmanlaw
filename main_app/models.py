@@ -1,5 +1,8 @@
 from django.db import models
 from django.urls import reverse
+
+# A User has many Posts; and a Post belongs to a User
+# Import the User
 from django.contrib.auth.models import User
 
 # Create your models here.
@@ -9,7 +12,7 @@ class Post(models.Model):
     title = models.CharField(max_length = 100)
     description = models.TextField(max_length = 2000)
     # Add the foreign key linking to a user instance
-#     # user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 # It's a best practice to override the __str__ method in Models. We can return Title for now
     def __str__(self):

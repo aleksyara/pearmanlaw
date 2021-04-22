@@ -25,4 +25,6 @@ urlpatterns = [
     path('disclaimer/', views.disclaimer, name='disclaimer'),
     path('privacy/', views.privacy, name='privacy'),
     path('admin/post/', views.post, name='post'),
+    # New url pattern below for the NEW Users
+    path('accounts/signup/', views.signup, name='signup'),
 ]
