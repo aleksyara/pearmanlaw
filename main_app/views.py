@@ -3,6 +3,10 @@ from django.shortcuts import render
 from django.views.generic.edit import CreateView
 from .models import Post
 
+# Add the two imports below for Login New User
+from django.contrib.auth import login
+from django.contrib.auth.forms import UserCreationForm
+
 def signup(request):
   error_message = ""
   if request.method == "POST":
@@ -14,7 +18,7 @@ def signup(request):
       # login our user (coming from auth)
       login(request, user) # <- this will create session cookie with sent back n forth on every request
       #redirect the user to the index
-      return redirect('index') # index is coming frm name urls.py
+      return redirect('home') # index is coming frm name urls.py
     else: 
       error_message = 'Invalid sign up - try again'
 
@@ -22,7 +26,7 @@ def signup(request):
   form = UserCreationForm()
   #^ this gives us the Blank Form
   context = {'form': form, 'error_message': error_message} # we injectin form and error to our html page
-  return render(request, 'registration/login.html', context) 
+  return render(request, 'registration/signup.html', context) 
 
 
 # Create your views here.

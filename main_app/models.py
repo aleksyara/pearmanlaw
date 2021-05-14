@@ -1,5 +1,7 @@
 from django.db import models
 from django.urls import reverse
+# from ckeditor_uploader.fields import RichTextUploadingField
+from ckeditor.fields import RichTextField
 
 # A User has many Posts; and a Post belongs to a User
 # Import the User
@@ -11,6 +13,7 @@ from django.contrib.auth.models import User
 class Post(models.Model):
     title = models.CharField(max_length = 100)
     description = models.TextField(max_length = 2000)
+    body = RichTextField(blank=True, null=True)
     # Add the foreign key linking to a user instance
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
